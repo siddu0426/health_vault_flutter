@@ -1,0 +1,27 @@
+name: health_vault_flutter
+description: A Flutter rebuild of the provided React HealthVault family medical records app.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  file_picker: any
+  flutter_tts: any
+  image_picker: any
+  shared_preferences: any
+  speech_to_text: any
+  url_launcher: any
+  flutter_riverpod: any
+  permission_handler: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+
+flutter:
+  uses-material-design: true
