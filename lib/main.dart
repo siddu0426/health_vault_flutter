@@ -2,14 +2,12 @@ import 'dart:async';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'features/voice_assistant/presentation/pages/voice_assistant_page.dart';
-import 'features/voice_assistant/presentation/widgets/voice_floating_button.dart';
+import 'voice_assistant.dart';
 
-void main() => runApp(const ProviderScope(child: HealthVaultApp()));
+void main() => runApp(const HealthVaultApp());
 
 void showAppMessage(BuildContext context, String message) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
@@ -104,9 +102,6 @@ class _AppShellState extends State<AppShell> {
           ),
         ),
       ),
-      floatingActionButton: page == AppPage.home
-          ? VoiceFloatingButton(onTap: () => go(AppPage.assistant))
-          : null,
       bottomNavigationBar: showNav ? BottomNav(current: _navPage(page), onTap: go) : null,
     );
   }

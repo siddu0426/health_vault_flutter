@@ -15,8 +15,6 @@ dependencies:
   shared_preferences: any
   speech_to_text: any
   url_launcher: any
-  flutter_riverpod: any
-  permission_handler: any
 
 dev_dependencies:
   flutter_test:
